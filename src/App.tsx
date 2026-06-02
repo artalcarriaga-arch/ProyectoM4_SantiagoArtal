@@ -1,13 +1,17 @@
-import { BrowserRouter } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider } from '@/features/auth/AuthContext'
+import { LoginPage } from '@/pages/LoginPage'
+import { RegisterPage } from '@/pages/RegisterPage'
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <div className="app">
-        <h1>Task Manager</h1>
-        <p>Hito 1: Setup inicial completado ✅</p>
-      </div>
-    </BrowserRouter>
+    <AuthProvider>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </AuthProvider>
   )
 }
 
