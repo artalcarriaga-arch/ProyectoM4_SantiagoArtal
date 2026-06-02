@@ -23,7 +23,7 @@ src/
 ├── utils/           # Funciones auxiliares
 functions/          # Serverless functions (Vercel)
 tests/              # Tests unitarios y de componentes
-DOCUMENTACION_PRIVADA/  # Documentación interna por hito
+
 ```
 
 ## Setup
