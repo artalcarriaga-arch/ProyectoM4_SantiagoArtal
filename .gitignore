@@ -6,6 +6,7 @@ dist-ssr
 .env.local
 .env.*.local
 .DS_Store
+DOCUMENTACION_PRIVADA/
 *.log
 *.tsbuildinfo
 .idea
