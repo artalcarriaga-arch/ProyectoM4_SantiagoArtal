@@ -34,7 +34,7 @@ export const useTasks = (userId: string | undefined) => {
         setTasks(sorted)
         setLoading(false)
       },
-      (err) => {
+      () => {
         setError('Error al cargar tareas')
         setLoading(false)
       }

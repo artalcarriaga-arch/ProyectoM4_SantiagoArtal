@@ -9,7 +9,21 @@ vi.mock('@/services/tasksService')
 const mockUser = {
   uid: 'test-user-id',
   email: 'test@example.com',
-}
+  emailVerified: false,
+  isAnonymous: false,
+  metadata: {},
+  providerData: [],
+  refreshToken: '',
+  tenantId: null,
+  displayName: null,
+  phoneNumber: null,
+  photoURL: null,
+  getIdToken: async () => '',
+  getIdTokenResult: async () => ({ token: '' }),
+  reload: async () => {},
+  delete: async () => {},
+  toJSON: () => ({}),
+} as any
 
 describe('TaskForm', () => {
   beforeEach(() => {
